@@ -4,8 +4,7 @@ from django.utils import timezone
 
 # models.Model means that the Post is a Django Model, so Django knows that it should be saved in the database
 class Post(models.Model):
-  author = models.ForeignKey(
-  settings.AUTH_USER_MODEL, on_delete=models.CASCADE)  # link to another model
+  author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)  # link to another model
   title = models.CharField(max_length=200)  # define text with a limited number of characters
   text = models.TextField()  # long text without a limit
   created_date = models.DateTimeField(default=timezone.now)  # date and time
