@@ -4,11 +4,17 @@
   <div class="container">
     <div class="title-date">
       <h2 class="title">{{ post.title }}</h2>
-      {% if post.published_date %}
-        <div class="date">
-          {{ post.published_date }}
-        </div>
-      {% endif %}
+      <div>
+        {% if post.published_date %}
+          <div class="date">
+            {{ post.published_date }}
+          </div>
+        {% endif %}
+
+        {% if user.is_authenticated %}
+          <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        {% endif %}
+      </div>
     </div>
 
     <p>{{ post.text|linebreaksbr }}</p>
