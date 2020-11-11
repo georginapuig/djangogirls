@@ -1,11 +1,15 @@
 # djangogirls
 
 ## Table of contents
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Illustrations](#Illustrations)
-* [Sources](#Sources)
-* [Setup](#setup)
+- [djangogirls](#djangogirls)
+  - [Table of contents](#table-of-contents)
+  - [General info](#general-info)
+  - [Technologies](#technologies)
+  - [Illustrations](#illustrations)
+      - [Home](#home)
+      - [Edit Post](#edit-post)
+  - [Sources](#sources)
+  - [Setup](#setup)
 
 ## General info
 Creating blog from DjangoGirls tutorial.
@@ -31,7 +35,7 @@ djangogirls tutorial: https://tutorial.djangogirls.org/en/
 
 ## Setup
 
-To start server (on port [8000](http://localhost:8000)):
+To start server (on port [8000](http://127.0.0.1:8000/)):
 
 ```bash
 (myvenv) ~/djangogirls$ python manage.py runserver
