@@ -11,11 +11,14 @@
 <body>
   <div class="header">
     <div class="container">
-      {% if user.is_authenticated %}
-        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-      {% endif %}
-      <h1>Django Girls Blog</h1>
+      <h1><a href="{% url 'post_list' %}">Django Girls Blog</a></h1>
       <p id="p-header">This is a cheap version of Medium</p>
+      {% if user.is_authenticated %}
+        <a id="new-post-a" href="{% url 'post_new' %}" class="top-menu">
+          <span class="glyphicon glyphicon-plus"></span>
+          New Post
+        </a>
+      {% endif %}
     </div>
   </div>
 
